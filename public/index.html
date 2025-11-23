@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Inicio | Kidtales</title>
+
+	<!-- Meta Tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Kidtales - Una plataforma de cuentos infantiles interactivos. Explora, aprende y disfruta de historias mágicas diseñadas para estimular la imaginación de los niños.">
+
+	<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+  	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+	<!-- Modo Claro -->
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+			// Forzar modo claro
+			document.documentElement.setAttribute('data-bs-theme', 'light');
+
+			const logo = document.getElementById('logo');
+			if (logo) {
+				logo.src = 'assets/images/logoKT.png';
+			}
+		});
+	</script>
+
+	<!-- Logo KidTales -->
+	<link rel="shortcut icon" href="assets/images/logoKT.png">
+
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap">
+
+	<!-- Plugins CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+
+	<!-- Theme CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+
+<body>
+
+
+<!-- Header -->
+<header class="navbar-light header-sticky">
+  <nav class="navbar navbar-expand-xl">
+    <div class="container">
+      <!-- Logo -->
+      <a class="navbar-brand" href="about.html">
+        <img src="assets/images/logoKT.png" alt="KidTales" style="height: 50px;">
+      </a>
+
+      <!-- Navbar contenido -->
+      <div class="navbar-collapse collapse justify-content-end" id="navbarCollapse">
+        <ul class="navbar-nav align-items-center">
+
+			<!-- Dropdown Nosotros -->
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle d-flex align-items-center" href="conocenos.html">
+				<img src="assets/images/globitos.png" alt="Globitos" style="width: 45px; margin-right: 6px;">
+        Nosotros
+        </a>
+        <ul class="dropdown-menu" aria-label="dropdown-nosotros">
+          <li><a class="dropdown-item" href="conocenos.html">Conócenos</a></li>
+          <li><a class="dropdown-item" href="servicios-kt.html">Servicios Kidtales</a></li>
+          <li><a class="dropdown-item" href="contact.html">Contacto</a></li>
+          <li><a class="dropdown-item" href="loogros.html">Logros</a></li>
+        </ul>
+        <style>
+          /* Estilos específicos para la sección "Conócenos" */
+          .nav-link[href="conocenos.html"] {
+            font-weight: bold;
+            width: 153px;
+          }
+        </style>
+			</li>
+
+       <!-- Dropdown términos y privacidad -->
+       <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle d-flex align-items-center" href="terms-of-service.html">
+          <img src="assets/images/globitos.png" alt="Globitos" style="width: 45px; margin-right: 6px;">
+          Legal
+        </a>
+        <ul class="dropdown-menu" aria-label="dropdown-legal">
+          <li><a class="dropdown-item" href="terms-of-service.html">Términos y Condiciones</a></li>
+          <li><a class="dropdown-item" href="privacy-policy.html">Política de Privacidad</a></li>
+        </ul>
+        <style>
+          /* Estilos específicos para la sección "Legal" */
+          .nav-link[href="terms-of-service.html"] {
+            font-weight: bold;
+            width: 150px;
+          }
+        </style>
+       </li>
+
+          <!-- Sign Up -->
+          <li class="nav-item">
+            <a href="coming-soon.html" class="btn btn-sm" style="background-color: #FF6B6B; color: white; border: none;">
+              <i class="fa-solid fa-right-to-bracket me-sm-2"></i>
+              <span class="d-none d-sm-inline">Sign Up</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- **************** MAIN CONTENT START **************** -->
+<main>
+
+<!-- =======================
+Main banner START -->
+<section>
+	<div class="container">
+		<div class="row mb-5">
+			<div class="col-xl-10 mx-auto text-center">
+				<div class="hero-wrapper position-relative">
+				<!-- Title -->
+				 <img src="assets/images/KidTales-titulo.png" alt="KidTales Título" class="img-fluid mb-0" style="max-width: 700px; margin-top: -60px;">
+
+				 <!--ondas-->
+				<section class="position-relative overflow-hidden text-center pt-0 pb-6" style="height: 90px;">
+					<img id="tren-img" src="assets/images/tren_largo_kt.png" class="img-fluid" style="position: absolute; top: 10px; left: 0; max-width: 500px;" alt="tren">
+				</section>
+				<script>
+					// bucle para el movimiento del tren
+					document.addEventListener('DOMContentLoaded', () => {
+						const tren = document.getElementById('tren-img');
+						const section = tren.parentElement;
+						let position = section.offsetWidth;
+
+						function animateTren() {
+							const maxMove = section.offsetWidth;
+							position -= 2;
+							if (position < -tren.offsetWidth) position = maxMove;
+							tren.style.left = position + 'px';
+							requestAnimationFrame(animateTren);
+						}
+						animateTren();
+						window.addEventListener('resize', () => { position = section.offsetWidth; });
+					});
+				</script>
+
+				<h1 class="mt-6">¡Explora, juega y aprende con KidTales!</h1>
+				<p class="lead fs-4">Creamos cuentos interactivos y bilingües para niños. Descubre historias personalizadas que fomentan la creatividad y el aprendizaje en inglés y español.</p>
+				<!-- Meta -->
+				<div class="hstack gap-6 flex-wrap justify-content-center">
+					<!-- Item -->
+					<h6 class="bg-mode shadow rounded-2 fw-normal d-inline-block py-2 px-4">
+						<img src="assets/images/mundo.png" class="h-40px me-2" alt="">
+						Clientes Globales
+					</h6>
+					<!-- Item -->
+					<h6 class="bg-mode shadow rounded-2 fw-normal d-inline-block py-2 px-6">
+						<img src="assets/images/libro-abierto.png" class="h-40px me-2" alt="">
+						+500 cuentos
+					</h6>
+				</div>
+				</div>
+			</div>
+		</div> <!-- Row END -->
+
+		<!-- Image START -->
+		<div class="row g-1 justify-content-center align-items-center text-center">
+			<!-- Image -->
+			<div class="col-md-5 justify-content-center align-items-center text-center">
+				<img src="assets/images/02.png"class="rounded-4 shadow" alt="Niño leyendo cuento">
+			</div>
+
+			<div class="col-md-7">
+				<div class="row g-3 justify-content-center align-items-center text-center">
+					<!-- Imagen superior -->
+					<div class="col-md-9 justify-content-center align-items-center text-center">
+						<img src="assets/images/01.png" class="img-fluid rounded-4 shadow-sm" alt="Niño jugando">
+					</div>
+
+					<!-- Imagen inferior -->
+					<div class="col-md-9 justify-content-center align-items-center text-center">
+						<img src="assets/images/03.png" class="img-fluid rounded-4 shadow-sm" alt="Familia leyendo">
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Image END -->
+	</div>
+</section>
+<!-- =======================
+Main banner START -->
+
+<!-- =======================
+
+<!- About content START -->
+<section class="container my-3">
+  <div class="row g-4">
+    <div class="col-md-7">
+      <h3 class="mb-3" style="color:#F47C2A;">Donde la imaginación cobra vida</h3>
+        <p class="fs-5 text-dark lh-base">
+          En un mundo lleno de pantallas, queríamos crear algo diferente. En Kidtales, transformamos el tiempo frente al dispositivo en un momento mágico: historias donde los niños no solo escuchan, sino que se ven reflejados, se emocionan y se convierten en protagonistas.
+        </p>
+        <p class="fs-5 text-dark lh-base">
+          Creamos una experiencia única a través de <strong>audio-cuentos personalizados</strong> e <strong>inteligencia artificial</strong>, pensada para estimular la creatividad, la imaginación y el amor por las historias. Cada cuento en Kidtales es una aventura única, hecha para que cada niño <strong>sea protagonista de su propio mundo</strong>.
+        </p>
+        <p class="fs-5 text-dark lh-base mb-0">
+          Kidtales es más que una app. Es un universo de aventuras diseñadas para que cada niño explore, ría, imagine… y viva cada cuento como si fuera suyo.
+        </p>
+    </div>
+		<div class="col-md-5 d-flex justify-content-center align-items-start">
+			<!-- GIF to the right of the text on large screens; hidden on small screens -->
+			<img src="assets/images/kidtalesBot/welcomeBot.gif" alt="Robot GIF" class="img-fluid d-none d-lg-block" loading="lazy" style="max-width:320px;">
+		</div>
+	</div>
+</section>
+<!-- Content END -->
+
+		<!-- Services START -->
+<section class="pt-5 pb-5 mb-5">
+	<div class="container">
+		<div class="row g-4">
+			<!-- Service item (audio-cuentos) -->
+			<div class="col-sm-6 col-lg-3">
+				<div class="icon-lg" style="background-color: #FDE4C3; color: #F47C2A; border-radius: 0.5rem;">
+					<i class="fa-solid fa-headphones fs-5"></i>
+				</div>
+				<h5 class="mt-2">Audio-cuentos personalizados</h5>
+				<p class="mb-0">Cada historia se adapta al niño para que viva su propio cuento como protagonista.</p>
+			</div>
+
+			<!-- Service item (IA)-->
+			<div class="col-sm-6 col-lg-3">
+				<div class="icon-lg" style="background-color: #d6effb; color: #55B4F0; border-radius: 0.5rem;">
+					<i class="fa-solid fa-robot fs-5"></i>
+				</div>
+				<h5 class="mt-2">Inteligencia Artificial</h5>
+				<p class="mb-0">Integramos tecnología para que los cuentos salten del papel a la vida real.</p>
+			</div>
+
+			<!-- Service item -->
+			<div class="col-sm-6 col-lg-3">
+				<div class="icon-lg" style="background-color: #FAD1D6; color: #F2666B; border-radius: 0.5rem;">
+					<i class="fa-solid fa-book-open-reader fs-5"></i>
+				</div>
+				<h5 class="mt-2">Biblioteca interactiva</h5>
+				<p class="mb-0">Una colección de cuentos y recursos para que los niños exploren y aprendan.</p>
+			</div>
+
+			<!-- Service item (diversión) -->
+			<div class="col-sm-6 col-lg-3">
+				<div class="icon-lg" style="background-color: #FFF4C2; color: #F47C2A; border-radius: 0.5rem;">
+					<i class="fa-solid fa-face-laugh-beam fs-5"></i>
+				</div>
+				<h5 class="mt-2">Diversión sin límites</h5>
+				<p class="mb-0">Entretenimiento seguro, creativo y diseñado para estimular la imaginación.</p>
+			</div>
+		</div>
+		<!-- Services END -->
+	</div>
+</section>
+<!-- =======================
+About content END -->
+
+<!-- Descarga la app -->
+<section class="py-5 text-center bg-light">
+  <div class="container">
+    <h3 class="mb-4" style="color: #d78f4b;">¡Descarga nuestra app!</h3>
+    <p class="mb-4 fs-5 text-dark">Explora los cuentos interactivos desde tu dispositivo móvil.</p>
+
+    <div class="d-flex justify-content-center gap-3 flex-wrap">
+      <!-- Botón iOS -->
+      <a href="https://testflight.apple.com/join/RWKd4N7H" target="_blank">
+        <img src="assets/images/Download_on_the_App_Store.png" alt="App Store" style="height: 60px;">
+      </a>
+
+      <!-- Botón Google Play (deshabilitado o próximamente) -->
+      <a href="#" onclick="alert('Próximamente disponible para Android'); return false;">
+        <img src="assets/images/Google_Play_Store.jpg" alt="Google Play" style="height: 52px; opacity: 0.9 ;">
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="pt-0 pt-lg-5">
+  <div class="container">
+    <div class="row mb-4 mb-md-5">
+      <div class="col-md-10 mx-auto text-center">
+        <h3 class="mb-4">¡Conoce a nuestros aliados!</h3>
+				<div class="row justify-content-center align-items-center gx-3">
+					<div class="col-6 col-md-3 text-center">
+						<img src="assets/images/logosalianzas/67708b3190366b41c98353ba_61415039c35e3c57189aa23b_gc4sformheaderlogo.png" alt="Aliados Kidtales" class="img-fluid mx-auto" style="max-height:400px; object-fit:contain;">
+					</div>
+					<div class="col-6 col-md-3 text-center">
+						<img src="assets/images/logosalianzas/Logo Ilan-03.png.avif" alt="Aliados Kidtales" class="img-fluid mx-auto" style="max-height:100px; object-fit:contain;">
+					</div>
+					<div class="col-6 col-md-3 text-center">
+						<img src="assets/images/logosalianzas/Logo-IEEGL-original.png" alt="Aliados Kidtales" class="img-fluid mx-auto" style="max-height:100px; object-fit:contain;">
+					</div>
+					<div class="col-6 col-md-3 text-center">
+						<img src="assets/images/logosalianzas/tecnologico-de-monterrey-blue-med.png" alt="Aliados Kidtales" class="img-fluid mx-auto" style="max-height:100px; object-fit:contain;">
+					</div>
+				</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-5 text-center bg-light">
+	<div class="row g-1 justify-content-center align-items-center text-center">
+		<div class="col-md-9 justify-content-center align-items-center text-center">
+			<img src="assets/images/04.png" class="img-fluid rounded-4 shadow-sm" alt="Familia leyendo" style="height:500px;">
+		</div>
+	</div>
+</section>
+
+
+</main>
+
+<!-- =======================
+Footer START -->
+<head>
+  <style>
+    body, h1, h2, h3, h4, h5, h6, p, a, button, .nav-link, footer {
+      font-family: 'Quicksand', sans-serif !important;
+    }
+
+    footer,
+    footer * {
+      color: white !important;
+    }
+  </style>
+</head>
+
+<footer style="background-color: #7e2626;" class="pt-5 text-white">
+	<div class="container">
+		<!-- Row START -->
+		<div class="row g-4">
+			<!-- Contacto -->
+      		<div class="col-lg-3">
+        		<img class="h-60px mb-3" src="assets/images/logoKT.png" alt="logo">
+        		<p>"Imaginación sin límites, aventuras sin fin"</p>
+       			 <p><i class="bi bi-envelope me-2"></i>kidtales@kidtales.com.mx</p>
+      		</div>
+
+			<!-- Páginas -->
+			<div class="col-lg-3">
+				<h5 class="mb-3">Páginas</h5>
+				<ul class="list-unstyled">
+					<li><a href="conocenos.html" class="text-white text-decoration-none">Conócenos</a></li>
+					<li><a href="servicios-kt.html" class="text-white text-decoration-none">Servicios Kidtales</a></li>
+				</ul>
+			</div>
+
+			<!-- Proyectos -->
+			<div class="col-lg-3">
+				<h5 class="mb-3">Nuestros logros</h5>
+				<ul class="list-unstyled">
+					<li><a href="logros.html" class="text-white text-decoration-none">Logros</a></li>
+        </ul>
+			</div>
+
+			<!-- Redes -->
+			<div class="col-lg-3">
+
+				<h5 class="mb-3">Síguenos en</h5>
+
+				<a href="https://www.instagram.com/kidtales.app?igsh=MXg5NmM1ejFuMTZwOA=="
+					class="btn btn-sm shadow px-2 bg-instagram mb-0">
+					<i class="fab fa-fw fa-instagram"></i>
+				</a>
+				<a href="https://www.instagram.com/kidtales.app?igsh=MXg5NmM1ejFuMTZwOA=="
+					class="ms-2 align-middle text-white text-decoration-none">Instagram</a>
+				<br>
+
+				<a href="#"
+					class="btn btn-sm shadow px-2 bg-facebook mb-0 mt-2">
+					<i class="fab fa-fw fa-facebook-f"></i>
+				</a>
+				<a href="#"
+					class="ms-2 align-middle text-white text-decoration-none">Facebook</a>
+
+				<br>
+
+				<a href="#"
+					class="btn btn-sm shadow px-2 bg-tik-tok mb-0 mt-2">
+					<i class="fab fa-fw fa-tiktok"></i>
+				</a>
+				<a href="#"
+					class="ms-2 align-middle text-white text-decoration-none">TikTok</a>
+
+				<br>
+				<a href="#"
+					class="btn btn-sm shadow px-2 bg-x mb-0 mt-2">
+					<i class="fab fa-fw fa-twitter"></i>
+				</a>
+				<a href="#"
+					class="ms-2 align-middle text-white text-decoration-none">X</a>
+
+
+			</div>
+
+
+			<!-- Descarga la app -->
+			<div class="col-lg-3">
+				<h5 class="mb-3">Descarga la app</h5>
+				<a href="https://testflight.apple.com/join/RWKd4N7H" class="text-white text-decoration-none">App Store</a>
+				<br>
+				<a href="#" onclick="alert('Próximamente disponible para Android'); return false;" class="text-white text-decoration-none">Google Play</a>
+			</div>
+
+
+			<!-- Divider -->
+			<hr class="mt-4" style="border-color: rgba(255, 255, 255, 0.2);">
+
+			<!-- Copyright -->
+			<div class="text-center py-3">
+			<small class="text-white">© 2025 Kidtales. Todos los derechos reservados.</small>
+			</div>
+		</div>
+		</footer>
+<!-- =======================
+Footer END -->
+
+
+<!-- Back to top -->
+<div class="back-top"></div>
+
+<!-- Bootstrap JS -->
+<script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- ThemeFunctions -->
+<script src="assets/js/functions.js"></script>
+
+</body>
+</html>

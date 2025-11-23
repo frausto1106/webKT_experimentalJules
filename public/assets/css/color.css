@@ -1,0 +1,212 @@
+/* Update below HEX and RGB color code to your primary color for light mode */
+[data-bs-theme=light] {
+  --bs-primary: #FFA500 !important;
+  --bs-primary-rgb: 255, 165, 0 !important; 
+  --bs-link-color: #4DB5E3 !important;
+  --bs-link-hover-color: #FF6B6B !important;
+  --bs-link-color-rgb: 77, 181, 227 !important;
+  --bs-link-hover-color-rgb: 255, 107, 107;
+  --bs-nav-pills-link-active-bg: #FFA500 !important;
+}
+
+/* [data-bs-theme=dark] {
+  --bs-primary: #FEEFA8 !important;
+  --bs-primary-rgb: 254, 239, 168 !important; 
+  --bs-link-color: #FFB347 !important;
+  --bs-link-hover-color: #FF6B6B !important;
+  --bs-link-color-rgb: 255, 179, 71 !important;
+  --bs-link-hover-color-rgb: 255, 107, 107;
+  --bs-nav-pills-link-active-bg: #FEEFA8 !important;
+}
+ */
+
+
+/* CSS for overriding primary colors */
+/* Navbar */
+/* .navbar, .navbar-dark {
+  color: #FFA500;
+} */
+.navbar a:hover,
+.navbar .active {
+  color: #FFA500 !important;
+}
+
+/* Navegación */
+.nav a:hover {
+  color: #FFA500 !important;
+}
+
+/* Dropdown */
+.dropdown-menu a:hover {
+  color: #FFA500 !important;
+  background-color: rgba(255, 165, 0, 0.1) !important;
+}
+.dropdown-menu a.active {
+  color: #FFA500 !important;
+  background-color: rgba(255, 165, 0, 0.1) !important;
+}
+
+/* Botón primario */
+.btn-primary {
+  background-color: #FFA500;
+  border-color: #FFA500;
+}
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus {
+  background-color: #FF6B6B;
+  border-color: #FF6B6B;
+}
+.btn-primary:disabled {
+  background-color: #FFA500;
+}
+
+/* Botón enlace */
+.btn-link,
+.btn-link:hover,
+.btn-link:active {
+  color: #FFA500;
+}
+
+/* Botón contorno */
+.btn-outline-primary {
+  color: #FFA500;
+  border-color: #FFA500;
+}
+.btn-outline-primary:hover,
+.btn-outline-primary:active {
+  background-color: #FFA500;
+  border-color: #FFA500;
+}
+
+/* Botón soft */
+.btn-primary-soft {
+  color: #FFA500;
+  background-color: rgba(255, 165, 0, 0.1);
+}
+.btn-primary-soft:hover,
+.btn-primary-soft:focus,
+.btn-primary-soft.active {
+  color: white;
+  background-color: #FFA500 !important;
+  border-color: #FFA500 !important;
+}
+
+/* Pills */
+.nav-pills .nav-link.active {
+  background-color: #FFA500;
+}
+
+/* Formularios */
+.form-control:focus {
+  border-color: #FFA500;
+}
+.form-check-input:checked {
+  background-color: #FFA500;
+  border-color: #FFA500;
+}
+.choices.is-focused .choices__inner {
+  border-color: #FFA500;
+}
+
+/* Texto con fondo */
+.text-bg-primary {
+  background-color: #FFA500 !important;
+}
+
+/* SVG relleno */
+.fill-primary {
+  fill: #FFA500 !important;
+}
+
+/* ========= MODO OSCURO ========= 
+[data-bs-theme="dark"] {
+  /* Navbar
+  .navbar, .navbar-dark {
+    color: #FEEFA8;
+  }
+  .navbar a:hover,
+  .navbar .active {
+    color: #FEEFA8 !important;
+  }
+
+  .nav a:hover {
+    color: #FEEFA8 !important;
+  }
+
+  .dropdown-menu a:hover {
+    color: #FEEFA8 !important;
+    background-color: rgba(254, 239, 168, 0.1) !important;
+  }
+  .dropdown-menu a.active {
+    color: #FEEFA8 !important;
+    background-color: rgba(254, 239, 168, 0.1) !important;
+  }
+
+  .btn-primary {
+    background-color: #FEEFA8;
+    border-color: #FEEFA8;
+  }
+  .btn-primary:hover,
+  .btn-primary:active,
+  .btn-primary:focus {
+    background-color: #FFB347;
+    border-color: #FFB347;
+  }
+  .btn-primary:disabled {
+    background-color: #FEEFA8;
+  }
+
+  .btn-link,
+  .btn-link:hover,
+  .btn-link:active {
+    color: #FEEFA8;
+  }
+
+  .btn-outline-primary {
+    color: #FEEFA8;
+    border-color: #FEEFA8;
+  }
+  .btn-outline-primary:hover,
+  .btn-outline-primary:active {
+    background-color: #FEEFA8;
+    border-color: #FEEFA8;
+  }
+
+  .btn-primary-soft {
+    color: #FEEFA8;
+    background-color: rgba(254, 239, 168, 0.1);
+  }
+  .btn-primary-soft:hover,
+  .btn-primary-soft:focus,
+  .btn-primary-soft.active {
+    color: white;
+    background-color: #FEEFA8 !important;
+    border-color: #FEEFA8 !important;
+  }
+
+  .nav-pills .nav-link.active {
+    background-color: #FEEFA8;
+  }
+
+  .form-control:focus {
+    border-color: #FEEFA8;
+  }
+
+  .form-check-input:checked {
+    background-color: #FEEFA8;
+    border-color: #FEEFA8;
+  }
+
+  .choices.is-focused .choices__inner {
+    border-color: #FEEFA8;
+  }
+
+  .text-bg-primary {
+    background-color: #FEEFA8 !important;
+  }
+
+  .fill-primary {
+    fill: #FEEFA8 !important;
+  }
+} */
